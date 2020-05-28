@@ -32,7 +32,7 @@ const Modal: React.FC<Props> = ({ title, image, onClickBanner, style }) => {
             <img src={image} alt="PWA Logo" />
           </div>
         )}
-        <span>{title}</span>
+        <span>{title || 'Add to Homescreen'}</span>
       </div>
       <MdClose size={24} onClick={() => setBannerVisible(false)} />
     </Container>
