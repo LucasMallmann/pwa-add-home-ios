@@ -9,9 +9,11 @@
   },
   "dependencies": {
     "next": "9.3.4",
+    "next-images": "^1.4.0",
+    "pwa-add-home-ios": "link:..",
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
-    "test": "link:.."
+    "react-icons": "^3.10.0"
   },
   "eslintConfig": {
     "extends": "react-app"
