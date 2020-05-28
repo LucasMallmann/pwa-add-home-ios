@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useCallback } from 'react';
+import React, { useMemo, useState } from 'react';
 import { MdClose } from 'react-icons/md';
 
 import { Container } from './styles';
@@ -23,21 +23,16 @@ const Modal: React.FC<ModalProps> = ({
   const standalone = useMemo(() => isInStandaloneMode(), [isInStandaloneMode]);
   const shouldRender = useMemo(() => ios && !standalone, [ios, standalone]);
 
-  const handleBannerClick = useCallback(() => {
-    onClickBanner();
-    setBannerVisible(false);
-  }, [onClickBanner, setBannerVisible]);
-
   return shouldRender && bannerVisible ? (
-    <Container onClick={handleBannerClick} {...rest}>
-      <div>
+    <Container {...rest}>
+      <button type="button" onClick={onClickBanner}>
         {image && (
           <div className="image-container">
             <img src={image} alt="PWA Logo" />
           </div>
         )}
         <span>{title || 'Add to Homescreen'}</span>
-      </div>
+      </button>
       <MdClose size={24} onClick={() => setBannerVisible(false)} />
     </Container>
   ) : null;

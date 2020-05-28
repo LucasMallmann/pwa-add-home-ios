@@ -27,7 +27,12 @@ export const Container = styled.div`
     transition: background 0s;
   }
 
-  > div {
+  > button {
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -42,6 +42,8 @@ module.exports = {
     'arrow-body-style': 'off',
     'react/prop-types': 'off',
     '@typescript-eslint/no-unused-vars': [2, { args: 'none' }],
+    // 'jsx-a11y/click-events-have-key-events': 'off',
+    // 'jsx-a11y/no-static-element-interactions': 'óff'
   },
   settings: {
     'import/resolver': {
