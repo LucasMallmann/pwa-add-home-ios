@@ -32,6 +32,7 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-underscore-dangle': 'off',
     camelcase: 'off',
+    'object-curly-newline': 'off',
     'no-console': ['error', { allow: ['tron'] }],
     'react/jsx-one-expression-per-line': 'off',
     'global-require': 'off',
@@ -40,6 +41,7 @@ module.exports = {
     'import/extensions': 'off',
     'arrow-body-style': 'off',
     'react/prop-types': 'off',
+    '@typescript-eslint/no-unused-vars': [2, { args: 'none' }],
   },
   settings: {
     'import/resolver': {
