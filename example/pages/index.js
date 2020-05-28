@@ -13,7 +13,7 @@ const Home = () => {
       <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
       <div className="container">
         <div className="content">
-          <h1>Ola</h1>
+          <h1>Bring this to your homepage!</h1>
         </div>
         <Modal
           title="Adicionar banana à página inicial"
@@ -24,7 +24,23 @@ const Home = () => {
         <style jsx>{`
           .content {
             height: 2000px;
-            background-color: red;
+            background-color: tomato;
+          }
+
+          h1 {
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 148px;
+            color: #333;
+          }
+        `}</style>
+
+        <style global jsx>{`
+          body {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
           }
         `}</style>
       </div>
