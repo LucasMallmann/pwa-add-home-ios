@@ -4,7 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/test.svg)](https://www.npmjs.com/package/test) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-Bring your pwa to iOS!
+Bring your pwa to iOS with notch detection out of the box!
 
 ## Install
 
