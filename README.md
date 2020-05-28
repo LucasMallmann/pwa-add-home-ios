@@ -41,6 +41,34 @@ const Example: React.FC = () => {
 };
 ```
 
+## Usage with nextJs
+
+With NextJS you must use the dynamic import. Since the lib needs to use the window object, it won't work on the server side. With dynamic import you can prevent the lib from loading on the server-side, and only import it on the client-side.
+
+```tsx
+import React, { Component } from 'react';
+import dynamic from 'next/dynamic';
+
+const AddToHomeScreen = dynamic(() => import('pwa-add-home-ios'), {
+  ssr: false,
+});
+
+import logo from './logo.svg';
+
+const Example: React.FC = () => {
+  return (
+    <Modal
+      title="Add this page to your home screen"
+      image={logo}
+      onClickBanner={() => console.log('You clicked the banner :)')}
+      style={{
+        backgroundColor: 'red',
+      }}
+    />
+  );
+};
+```
+
 ## License
 
 MIT © [LucasMallmann](https://github.com/LucasMallmann)
