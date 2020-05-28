@@ -1,6 +1,11 @@
 {
   "name": "pwa-add-home-ios",
   "version": "1.0.0",
+  "keywords": [
+    "nextjs",
+    "pwa",
+    "typescript"
+  ],
   "description": "test",
   "author": "LucasMallmann",
   "license": "MIT",
