@@ -1,15 +1,14 @@
-import React, { useMemo, useState, useCallback, CSSProperties } from 'react';
+import React, { useMemo, useState, useCallback } from 'react';
 import { MdClose } from 'react-icons/md';
 
 import { Container } from './styles';
 
 import { isInStandaloneMode, isIos } from '../utils/browser';
 
-interface Props {
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
   onClickBanner: () => void;
   title?: string;
   image?: string;
-  style?: CSSProperties;
 }
 
 const Modal: React.FC<Props> = ({ title, image, onClickBanner, style }) => {
