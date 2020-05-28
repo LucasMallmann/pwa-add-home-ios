@@ -14,6 +14,10 @@ export const Container = styled.div`
   padding: 12px 18px;
   border-top: 1px solid #ddd;
 
+  @supports (padding: max(0px)) {
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+  }
+
   transition: background 0.8s;
 
   &:active {

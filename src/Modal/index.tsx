@@ -5,17 +5,16 @@ import { Container } from './styles';
 
 import { isInStandaloneMode, isIos } from '../utils/browser';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
+interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
   onClickBanner: () => void;
   title?: string;
   image?: string;
 }
 
-const Modal: React.FC<Props> = ({
+const Modal: React.FC<ModalProps> = ({
   title,
   image,
   onClickBanner,
-  style,
   ...rest
 }) => {
   const [bannerVisible, setBannerVisible] = useState(true);
@@ -30,7 +29,7 @@ const Modal: React.FC<Props> = ({
   }, [onClickBanner, setBannerVisible]);
 
   return shouldRender && bannerVisible ? (
-    <Container onClick={handleBannerClick} style={style} {...rest}>
+    <Container onClick={handleBannerClick} {...rest}>
       <div>
         {image && (
           <div className="image-container">
