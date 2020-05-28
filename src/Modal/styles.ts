@@ -11,9 +11,10 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 18px;
+  padding: 10px 16px;
   border-top: 1px solid #ddd;
 
+  /* This is going to add the notch support so the banner wont get hidden behind it */
   @supports (padding: max(0px)) {
     padding-bottom: max(12px, env(safe-area-inset-bottom));
   }
