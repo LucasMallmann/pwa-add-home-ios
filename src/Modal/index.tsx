@@ -11,7 +11,13 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   image?: string;
 }
 
-const Modal: React.FC<Props> = ({ title, image, onClickBanner, style }) => {
+const Modal: React.FC<Props> = ({
+  title,
+  image,
+  onClickBanner,
+  style,
+  ...rest
+}) => {
   const [bannerVisible, setBannerVisible] = useState(true);
 
   const ios = useMemo(() => isIos(), [isIos]);
@@ -24,7 +30,7 @@ const Modal: React.FC<Props> = ({ title, image, onClickBanner, style }) => {
   }, [onClickBanner, setBannerVisible]);
 
   return shouldRender && bannerVisible ? (
-    <Container onClick={handleBannerClick} style={style}>
+    <Container onClick={handleBannerClick} style={style} {...rest}>
       <div>
         {image && (
           <div className="image-container">
