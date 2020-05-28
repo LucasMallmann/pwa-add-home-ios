@@ -1,10 +1,3 @@
-import * as React from 'react';
-import styles from './styles.module.css';
+import Modal from './Modal';
 
-interface Props {
-  text: string;
-}
-
-export const ExampleComponent = ({ text }: Props) => {
-  return <div className={styles.test}>Example of: {text}</div>;
-};
+export default Modal;
