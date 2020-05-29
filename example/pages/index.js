@@ -16,9 +16,12 @@ const Home = () => {
           <h1>Bring this to your homepage!</h1>
         </div>
         <Modal
-          title="Adicionar banana à página inicial"
+          title="Adicionar Pling à sua página inicial"
           image={banana}
           onClickBanner={() => alert('hey bro')}
+          style={{
+            fontSize: 16,
+          }}
         />
 
         <style jsx>{`

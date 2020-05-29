@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   z-index: 9999;
   box-sizing: border-box;
+  font-size: 16px;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -11,7 +12,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 16px;
+  padding: 10px 12px;
   border-top: 1px solid #ddd;
 
   /* This is going to add the notch support so the banner wont get hidden behind it */
@@ -29,6 +30,7 @@ export const Container = styled.div`
 
   > button {
     background: none;
+    font-size: inherit;
     padding: 0;
     margin: 0;
     border: 0;
@@ -39,7 +41,7 @@ export const Container = styled.div`
 
     .image-container {
       width: 36px;
-      height: 36px;
+      height: 32px;
       margin-right: 8px;
 
       img {
@@ -50,7 +52,7 @@ export const Container = styled.div`
 
     span {
       font-family: inherit;
-      font-size: 18px;
+      font-size: inherit;
       color: #007aff;
     }
   }
